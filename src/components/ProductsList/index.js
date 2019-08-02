@@ -33,6 +33,7 @@ class Products extends Component {
             return (
               <ProductCard 
                 key={product.id}
+                id={product.id}
                 name={product.name}
                 description={product.description}
                 img_url={product.img_url}
