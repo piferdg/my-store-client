@@ -1,0 +1,10 @@
+.container {
+  width: 90vw;
+  margin: 0 auto; //this is a good shorthand center. Sets top/bottom to 0, and left/right to auto
+}
+
+.productsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr; //this basically organizes the items into columns, and the 'fr' makes each column 1/2 of the page.
+  grid-gap: 1rem;
+}
