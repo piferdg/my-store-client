@@ -1,12 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import { useAuth0 } from '../../react-auth0-wrapper'
+import Loader from '../Loader'
 
 const Profile = () => {
   const { loading, user } = useAuth0()
 
   if (loading || !user) {
-    return 'Loading...'
+    return <Loader />
   }
 
   return (
