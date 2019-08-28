@@ -1,7 +1,7 @@
+/* eslint-disable no-unused-vars */
 // eslint-disable-next-line
 import React from 'react'
 import './App.scss'
-// eslint-disable-next-line no-unused-vars
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './components/Home' 
 import Navigation from './components/Navigation'
@@ -10,6 +10,8 @@ import ProductDetail from './components/ProductDetail'
 import PaymentSuccess from './components/PaymentSuccess'
 import PaymentCancel from './components/PaymentCancel'
 import Profile from './components/Profile'
+import PrivateRoute from './components/PrivateRoute'
+import ExternalAPI from './components/ExternalAPI'
 
 function App() {
   return (
@@ -22,7 +24,8 @@ function App() {
         <Route path='/products/:id' component={ProductDetail} />
         <Route path='/success' component={PaymentSuccess} />
         <Route path='/cancel' component={PaymentCancel} />
-        <Route path='/profile' component={Profile} />
+        <PrivateRoute path='/profile' component={Profile} />
+        <PrivateRoute path='/test' component={ExternalAPI} />
       </Switch>
     </Router>
   )
